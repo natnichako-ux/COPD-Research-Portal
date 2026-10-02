@@ -33,7 +33,7 @@ export default function Traditions() {
               </p>
               <h2
                 className="text-3xl font-bold text-gray-900 mb-2 leading-tight"
-                style={{ fontFamily: 'var(--font-display)' }}
+                style={{ fontFamily: 'var(--font-heading)' }}
               >
                 {t.nameTh}
               </h2>

@@ -6,7 +6,6 @@ const navLinks = [
   { to: '/cultural-sites', label: 'Cultural Sites' },
   { to: '/traditions', label: 'Traditions' },
   { to: '/festivals', label: 'Festivals' },
-  { to: '/explore', label: 'Explore' },
 ]
 
 export default function Footer() {

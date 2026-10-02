@@ -12,7 +12,7 @@ export default function SectionHeader({ titleTh, titleEn, seeAllHref, center = f
         </div>
         <h2
           className="text-2xl font-bold text-gray-900"
-          style={{ fontFamily: 'var(--font-display)' }}
+          style={{ fontFamily: 'var(--font-heading)' }}
         >
           {titleTh}
         </h2>

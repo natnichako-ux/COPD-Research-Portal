@@ -1,11 +1,10 @@
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from './pages/Home'
 import CulturalSites from './pages/CulturalSites'
 import Traditions from './pages/Traditions'
 import Festivals from './pages/Festivals'
-import Explore from './pages/Explore'
 
 export default function App() {
   return (
@@ -17,7 +16,7 @@ export default function App() {
           <Route path="/cultural-sites" element={<CulturalSites />} />
           <Route path="/traditions"     element={<Traditions />} />
           <Route path="/festivals"      element={<Festivals />} />
-          <Route path="/explore"        element={<Explore />} />
+          <Route path="/explore"        element={<Navigate to="/" replace />} />
         </Routes>
       </div>
       <Footer />

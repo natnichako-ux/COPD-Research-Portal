@@ -8,8 +8,9 @@ body {
 }
 
 :root {
-  --font-display: "Noto Serif Thai", "Noto Serif", serif;
-  --font-body: "Noto Sans Thai", "Noto Sans", sans-serif;
+  --font-heading: "IBM Plex Sans Thai", sans-serif;
+  --font-display: var(--font-heading);
+  --font-body: var(--font-heading);
 }
 
 /* Fade + slide up on scroll */

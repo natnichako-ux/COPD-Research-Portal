@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom'
-
 const categoryColors = {
   temple:  'bg-slate-700/20 text-slate-200 border-slate-500/30',
   museum:  'bg-blue-500/20 text-blue-200 border-blue-400/30',
@@ -13,9 +11,8 @@ export default function PlaceCard({ place, size = 'normal' }) {
   const imgH = size === 'large' ? 'h-60' : 'h-52'
 
   return (
-    <Link
-      to={`/explore?category=${place.category}`}
-      className={`group relative block rounded-2xl overflow-hidden ${imgH} cursor-pointer`}
+    <article
+      className={`group relative block rounded-2xl overflow-hidden ${imgH}`}
     >
       {/* Image */}
       <img
@@ -41,26 +38,16 @@ export default function PlaceCard({ place, size = 'normal' }) {
         </h3>
         <p className="text-white/60 text-xs mt-0.5 mb-2">{place.nameEn}</p>
 
-        {/* Description + arrow — hidden until hover */}
+        {/* Description — hidden until hover */}
         <div className="overflow-hidden max-h-0 group-hover:max-h-20 transition-all duration-400 ease-out">
           <p className="text-white/75 text-xs line-clamp-2 mb-2 leading-relaxed">
             {place.description}
           </p>
         </div>
-
-        <span className="inline-flex items-center gap-1 text-slate-300 text-xs font-semibold">
-          Discover more
-          <svg
-            className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1"
-            fill="none" stroke="currentColor" viewBox="0 0 24 24"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-          </svg>
-        </span>
       </div>
 
       {/* Hover ring */}
       <div className="absolute inset-0 rounded-2xl ring-2 ring-slate-500/0 group-hover:ring-slate-400/50 transition-all duration-300" />
-    </Link>
+    </article>
   )
 }

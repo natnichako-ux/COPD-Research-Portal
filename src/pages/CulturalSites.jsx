@@ -11,7 +11,6 @@ export default function CulturalSites() {
       <SectionHeader
         titleTh="สถานที่วัฒนธรรม"
         titleEn="Cultural Sites"
-        seeAllHref="/explore"
       />
       <p className="text-gray-400 text-sm max-w-xl mb-14 -mt-4">
         Placeholder — add a short introduction about the cultural heritage sites of เทศบาลเมืองศิลา.

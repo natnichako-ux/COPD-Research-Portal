@@ -3,7 +3,7 @@ import { hero } from '../data/hero'
 
 export default function Hero() {
   return (
-    <section className="relative h-screen min-h-[720px] flex items-end overflow-hidden">
+    <section className="relative h-screen min-h-[720px] flex items-start overflow-hidden">
       {/* Background image */}
       <img
         src={hero.image}
@@ -17,7 +17,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent" />
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 pb-12 w-full">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-16 md:pt-24 pb-12 w-full">
         <p
           className="text-amber-400 text-[11px]  tracking-[1px] uppercase mb-4 animate-fade-up"
           style={{ animationDelay: '0.3s' }}
@@ -28,7 +28,7 @@ export default function Hero() {
         <h1
           className="text-white font-bold leading-[1.1] mb-5 whitespace-pre-line animate-fade-up"
           style={{
-            fontFamily: 'var(--font-display)',
+            fontFamily: 'var(--font-heading)',
             fontSize: 'clamp(2rem, 5vw, 3rem)',
             animationDelay: '0.2s',
           }}
@@ -38,7 +38,7 @@ export default function Hero() {
         <h2
           className="text-white leading-[1.1]  whitespace-pre-line animate-fade-up"
           style={{
-            fontFamily: 'var(--font-display)',
+            fontFamily: 'var(--font-heading)',
             fontSize: 'clamp(2rem, 5vw, 3rem)',
             animationDelay: '0.2s',
           }}
@@ -53,23 +53,7 @@ export default function Hero() {
           {hero.description}
         </p>
 
-        <div
-          className="flex items-center gap-5 animate-fade-up"
-          style={{ animationDelay: '0.44s' }}
-        >
-          <Link
-            to={hero.ctaPrimary.href}
-            className="group inline-flex items-center gap-2.5 bg-slate-800 hover:bg-slate-700 text-white font-semibold px-7 py-3 rounded-full transition-all duration-300 hover:shadow-xl hover:shadow-slate-800/40 hover:-translate-y-0.5"
-          >
-            {hero.ctaPrimary.label}
-            <svg
-              className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
-              fill="none" stroke="currentColor" viewBox="0 0 24 24"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </Link>
-
+        <div className="animate-fade-up" style={{ animationDelay: '0.44s' }}>
           <Link
             to={hero.ctaSecondary.href}
             className="text-white/80 hover:text-white text-sm font-medium transition-colors duration-200 underline underline-offset-4 decoration-white/30 hover:decoration-white/70"

@@ -60,19 +60,8 @@ export default function Navbar() {
           ))}
         </nav>
 
-        {/* CTA */}
+        {/* Mobile hamburger */}
         <div className="flex items-center gap-3">
-          <Link
-            to="/explore"
-            className="hidden md:inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-white text-sm font-semibold px-5 py-2 rounded-full transition-all duration-200 hover:shadow-lg hover:shadow-slate-800/40 hover:-translate-y-px"
-          >
-            Explore
-            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </Link>
-
-          {/* Mobile hamburger */}
           <button
             onClick={() => setOpen(!open)}
             className="md:hidden p-2 rounded-lg text-gray-500 hover:text-slate-900 hover:bg-slate-100 transition-colors"
@@ -104,13 +93,6 @@ export default function Navbar() {
               {label}
             </NavLink>
           ))}
-          <Link
-            to="/explore"
-            onClick={() => setOpen(false)}
-            className="mt-2 bg-slate-800 hover:bg-slate-700 text-white text-sm font-semibold px-4 py-2 rounded-full text-center"
-          >
-            Explore
-          </Link>
         </nav>
       </div>
     </header>
