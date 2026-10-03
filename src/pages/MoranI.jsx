@@ -5,12 +5,12 @@ import { places } from '../data/places'
 const culturalCategories = ['temple', 'museum', 'gallery']
 const cultural = places.filter((p) => culturalCategories.includes(p.category))
 
-export default function CulturalSites() {
+export default function Moransi() {
   return (
     <main className="max-w-7xl mx-auto px-6 py-20">
       <SectionHeader
-        titleTh="สถานที่วัฒนธรรม"
-        titleEn="Cultural Sites"
+        titleTh="Spatial Autocorrelation"
+        titleEn="การวิเคราะห์ความสัมพันธ์เชิงพื้นที่"
       />
       <p className="text-gray-400 text-sm max-w-xl mb-14 -mt-4">
         Placeholder — add a short introduction about the cultural heritage sites of เทศบาลเมืองศิลา.

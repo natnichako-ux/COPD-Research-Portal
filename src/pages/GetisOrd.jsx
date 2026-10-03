@@ -1,16 +1,18 @@
 import SectionHeader from '../components/SectionHeader'
 import { traditions } from '../data/traditions'
 
-export default function Traditions() {
+const getisord = traditions
+
+export default function GetisOrd() {
   return (
     <main className="max-w-7xl mx-auto px-6 py-20">
-      <SectionHeader titleTh="ประเพณี" titleEn="Traditions" />
+      <SectionHeader titleTh="Getis Ord Gi*" titleEn="การทดสอบทางสถิติ " />
       <p className="text-gray-400 text-sm max-w-xl mb-16 -mt-4">
         Placeholder — add a short intro about the living traditions of เทศบาลเมืองศิลา.
       </p>
 
       <div className="space-y-20">
-        {traditions.map((t, i) => (
+        {getisord.map((t, i) => (
           <div
             key={t.id}
             className={`flex flex-col md:flex-row gap-10 items-center ${i % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}

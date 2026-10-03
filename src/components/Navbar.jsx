@@ -4,9 +4,9 @@ import { site } from '../data/site'
 
 const links = [
   { to: '/',               label: 'Home' },
-  { to: '/cultural-sites', label: 'Cultural Sites' },
-  { to: '/traditions',     label: 'Traditions' },
-  { to: '/festivals',      label: 'Festivals' },
+  { to: '/cultural-sites', label: "Moran's I" },
+  { to: '/traditions',     label: 'Getis Ord Gi*' },
+  { to: '/festivals',      label: 'Compare' },
 ]
 
 export default function Navbar() {
@@ -32,7 +32,7 @@ export default function Navbar() {
         <Link to="/" className="flex items-center gap-3 group">
           <div className="w-10 h-10 rounded-full overflow-hidden bg-white shadow-sm transition-shadow duration-300 group-hover:shadow-slate-300">
             <img
-              src="/Image/3.png"
+              src="/Image/logo.png"
               alt={site.brandName}
               className="w-full h-full object-cover"
             />

@@ -19,7 +19,7 @@ export default function Footer() {
         <div>
           <div className="flex items-center gap-2.5 mb-3">
             <div className="w-8 h-8 rounded-full bg-gradient-to-br from-slate-700 to-slate-900 flex items-center justify-center">
-              <span className="text-white text-xs font-bold">S</span>
+              <span className="text-white text-xs font-bold">Geo</span>
             </div>
             <span className="font-bold text-white">{site.brandName}</span>
           </div>
@@ -60,14 +60,7 @@ export default function Footer() {
               </svg>
               {site.email}
             </li>
-            <li className="flex items-center gap-2">
-              <svg className="w-3.5 h-3.5 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-              {site.openHours}
-            </li>
           </ul>
-
           <div className="flex gap-3 mt-6">
             {[
               { href: site.social.facebook, label: 'FB' },

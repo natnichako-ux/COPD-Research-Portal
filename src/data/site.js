@@ -5,16 +5,16 @@
 // ============================================================
 
 export const site = {
-  nameTh: "เทศบาลเมืองศิลา",
-  nameEn: "Sila Municipality",
-  brandName: "Sila Heritage",
-  tagline: "Discover the cultural heritage of Sila",
+  nameTh: "การวิเคราะห์การกระจายเชิงพื้นที่โรคปอดอุดกั้นเรื้อรังร่วมกับจุดความร้อน",
+  nameEn: "COPD & Hotspot Analysis",
+  brandName: "COPD & Hotspot Analysis",
+  tagline: "ระเบียบวิธีวิจัยทางภูมิสารสนเทศศาสตร์",  
 
   // Used in the footer
   address: "Placeholder — ที่อยู่เทศบาลเมืองศิลา",
-  phone: "043-xxx-xxx",
-  email: "info@silacity.go.th",
-  openHours: "จันทร์–ศุกร์ 08:30–16:30",
+  phone: "065-6422017",
+  email: "natnicha.ko@kkumail.com",
+
 
   // Social links — replace '#' with real URLs
   social: {

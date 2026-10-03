@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import { hero } from '../data/hero'
 
 export default function Hero() {
@@ -53,14 +52,6 @@ export default function Hero() {
           {hero.description}
         </p>
 
-        <div className="animate-fade-up" style={{ animationDelay: '0.44s' }}>
-          <Link
-            to={hero.ctaSecondary.href}
-            className="text-white/80 hover:text-white text-sm font-medium transition-colors duration-200 underline underline-offset-4 decoration-white/30 hover:decoration-white/70"
-          >
-            {hero.ctaSecondary.label}
-          </Link>
-        </div>
       </div>
 
       {/* Scroll cue */}
