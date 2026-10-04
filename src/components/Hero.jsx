@@ -52,6 +52,14 @@ export default function Hero() {
           {hero.description}
         </p>
 
+        <div className="animate-fade-up" style={{ animationDelay: '0.44s' }}>
+          <a
+            href={hero.ctaSecondary.href}
+            className="text-white/80 hover:text-white text-sm font-medium transition-colors duration-200 underline underline-offset-4 decoration-white/30 hover:decoration-white/70"
+          >
+            {hero.ctaSecondary.label}
+          </a>
+        </div>
       </div>
 
       {/* Scroll cue */}

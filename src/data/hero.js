@@ -7,6 +7,7 @@
 // - titleTh: main heading in Thai
 // - titleEn: main heading in English
 // - description: short paragraph under the title
+// - ctaSecondary: link label and destination
 // ============================================================
 
 export const hero = {
@@ -17,4 +18,5 @@ export const hero = {
   titleEn: "Discover Sila",
   description:
     "วิเคราะห์รูปแบบการกระจายและการเกาะกลุ่มเชิงพื้นที่ของอัตราป่วยด้วยกลุ่มโรคระบบทางเดินหายใจในภาคตะวันออกเฉียงเหนือ (Spatial Autocorrelation) รวมถึงระบุและเปรียบเทียบ Hot/Cold Spots ของอัตราป่วยกับจุดความร้อน",
+  ctaSecondary: { label: "เรียนรู้เพิ่มเติม", href: "#abstract" },
 }
