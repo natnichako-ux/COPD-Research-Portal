@@ -30,6 +30,46 @@ export default function Moransi() {
         พื้นที่ค่าต่ำล้อมรอบด้วยค่าต่ำ (Low-Low) และพื้นที่ผิดปกติ (Outlier) โดยดำเนินการแยกเป็นรายปี 
         ผลลัพธ์ที่ได้ ได้แก่ ค่า Global Moran's I และ p-value รายปี แผนที่ LISA Cluster รายปี
       </p>
+
+      <section className="mt-10 max-w-4xl space-y-6 text-gray-600">
+        <div>
+          <h2 className="mb-3 text-lg font-semibold text-gray-800">
+            1 ทดสอบภาพรวมของการกระจายตัว (Global Moran's I)
+          </h2>
+          <p className="text-base leading-8 indent-8">
+            ใช้ทดสอบภาพรวมของการกระจายตัวเชิงพื้นที่ทั้งพื้นที่ศึกษา (global pattern) ว่าตัวแปรที่สนใจมีแนวโน้มรวมกลุ่มเชิงพื้นที่
+            (spatial clustering) กระจายสม่ำเสมอ หรือเป็นแบบสุ่ม โดยอาศัยค่าจากพื้นที่ข้างเคียงตามโครงสร้างเมทริกซ์น้ำหนักเชิงพื้นที่
+            (spatial weights matrix) ที่กำหนดไว้ในขั้นตอนการเตรียมข้อมูล โดยค่า Moran's I ซึ่งอยู่ในช่วงประมาณ -1 ถึง +1
+            บ่งบอกทิศทางและความแข็งแรงของความสัมพันธ์เชิงพื้นที่ในภาพรวม ค่าเข้าใกล้ +1 หมายถึงมีการรวมกลุ่มเชิงพื้นที่
+            (positive spatial autocorrelation) พื้นที่ใกล้กันมีค่าคล้ายคลึงกัน ค่าเข้าใกล้ -1 หมายถึงมีการกระจายสลับกัน
+            (negative spatial autocorrelation) พื้นที่ใกล้กันมีค่าตรงข้ามกัน และค่าเข้าใกล้ 0 หมายถึงไม่มีรูปแบบเชิงพื้นที่ที่ชัดเจน
+            (random pattern) ค่า z-score และ p-value ใช้บ่งชี้นัยสำคัญทางสถิติของค่า Moran's I ที่คำนวณได้ หากค่า p-value
+            น้อยกว่า 0.05 ถือว่ารูปแบบการกระจายตัวที่พบมีนัยสำคัญทางสถิติที่ระดับความเชื่อมั่น 95% (ไม่ได้เกิดจากความบังเอิญ)
+          </p>
+        </div>
+
+        <div>
+          <h2 className="mb-3 text-lg font-semibold text-gray-800">
+            2 ทดสอบการกระจายตัวแบบระบุตำแหน่งเฉพาะ (Local Indicators of Spatial Association)
+          </h2>
+          <p className="text-base leading-8 indent-8">
+            เป็นการขยายผลจาก Global Moran's I มาสู่ระดับพื้นที่ย่อย เพื่อระบุตำแหน่งเฉพาะที่มีนัยสำคัญทางสถิติ
+            โดยจำแนกออกเป็น 4 รูปแบบ (แสดงผลในรูปแบบแผนที่ LISA cluster map)
+          </p>
+          <ul className="my-4 space-y-3 pl-8 text-base leading-8">
+            <li>High-High (HH): พื้นที่ที่มีค่าสูงล้อมรอบด้วยพื้นที่ที่มีค่าสูง (hot spot cluster)</li>
+            <li>Low-Low (LL): พื้นที่ที่มีค่าต่ำล้อมรอบด้วยพื้นที่ที่มีค่าต่ำ (cold spot cluster)</li>
+            <li>High-Low (HL): พื้นที่ที่มีค่าสูงแต่ล้อมรอบด้วยพื้นที่ที่มีค่าต่ำ (spatial outlier)</li>
+            <li>Low-High (LH): พื้นที่ที่มีค่าต่ำแต่ล้อมรอบด้วยพื้นที่ที่มีค่าสูง (spatial outlier)</li>
+          </ul>
+          <p className="text-base leading-8 indent-8">
+            ในกรณีที่ต้องการวิเคราะห์ความสัมพันธ์ระหว่างสองตัวแปรพร้อมกัน (เช่น จุดความร้อนกับอัตราป่วย)
+            สามารถประยุกต์ใช้ Bivariate Moran's I เพื่อตรวจสอบว่าค่าสูงของตัวแปรหนึ่งในพื้นที่หนึ่งมีความสัมพันธ์
+            กับค่าสูงของอีกตัวแปรหนึ่งในพื้นที่ใกล้เคียงหรือไม่
+          </p>
+        </div>
+      </section>
+      
       <div className="mt-12 space-y-12">
         {analysisYears.map(({ year, moran, zScore, rSquared }) => (
           <section key={year} aria-labelledby={`analysis-year-${year}`}>

@@ -11,7 +11,7 @@ export const site = {
   tagline: "ระเบียบวิธีวิจัยทางภูมิสารสนเทศศาสตร์",  
 
   // Used in the footer
-  address: "Placeholder — ที่อยู่เทศบาลเมืองศิลา",
+  address: "นักศึกษาปริญญาตรี สาขาวิชาภูมิสารสนเทศศาสตร์ วิทยาลัยการคอมพิวเตอร์ มหาวิทยาลัยขอนแก่น",
   phone: "065-6422017",
   email: "natnicha.ko@kkumail.com",
 

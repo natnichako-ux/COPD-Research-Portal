@@ -3,9 +3,9 @@ import { site } from '../data/site'
 
 const navLinks = [
   { to: '/', label: 'Home' },
-  { to: '/cultural-sites', label: 'Cultural Sites' },
-  { to: '/traditions', label: 'Traditions' },
-  { to: '/festivals', label: 'Festivals' },
+  { to: '/cultural-sites', label: "Moran's I" },
+  { to: '/traditions', label: 'Getis Ord Gi*' },
+  { to: '/festivals', label: 'Compare' },
 ]
 
 export default function Footer() {
